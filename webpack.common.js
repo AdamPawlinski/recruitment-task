@@ -13,7 +13,16 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "raw-loader"
-     }
+     },
+     {
+        test: /\.js$|\.jsx$/,
+        loader: "babel-loader",
+        exclude: /node_modules/,
+        options: {
+          cacheDirectory: true,
+          plugins: ['react-hot-loader/babel']          
+        }
+      }
     ]
-  }
+  }  
 }
