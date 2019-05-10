@@ -1,0 +1,69 @@
+@media screen and (max-width: 992px) { 
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .header-container {
+        border-bottom: none;
+        display: flex;
+        flex-direction: column;    
+        justify-content: center;
+        max-height: 50vh;
+    }
+    
+    .navbar-list {
+        display: flex;
+        flex-direction: column;    
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .logo {
+        max-height: 20vh;
+        object-fit: cover;
+        margin: .5rem;
+    }
+    
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .navbar-link {
+        padding: 1.5rem 0;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .main-container {
+        max-width: 70vw;
+        margin: 0 auto;
+    }
+
+    .sidebar-container > div > p {
+        text-align: center;
+    }
+    
+    .main-container,
+    .sidebar-container,    
+    .sidebar-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .product-container {
+        display: grid;
+        grid-auto-columns: 1fr;   
+    }
+}

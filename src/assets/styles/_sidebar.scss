@@ -9,8 +9,18 @@
     padding: .5rem;
 }
 
+.sidebar-header > i {
+    font-size: 1.5rem;
+}
+
 .cart-container {
     border: 1px dashed $white;
     color: $white;
+    padding: .5rem;
+    min-height: 10vh;
+}
+
+.cart-item {
+    background-color: $dark-blue;
     padding: .5rem;
 }

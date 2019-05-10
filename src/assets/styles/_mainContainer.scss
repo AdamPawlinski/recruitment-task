@@ -18,14 +18,25 @@
     display: grid;
     grid-auto-columns: minmax(10vw, 1fr);
     grid-gap: 5vw;
-    grid-column: 2/3;
+    grid-column: 2/3;    
 }
 
-.product-item {
+.product-card{
     background-color: $white;
     color: $black;
 }
 
-.product-item > a:focus {
+.product-card > a:focus {
     color: $black;
+}
+
+.product-card h3, 
+.product-card p {
+    padding: 0 .5rem;
+}
+
+.product-card img {
+    max-height: 12vh;
+    min-width: 10vw;
+    object-fit: cover;
 }

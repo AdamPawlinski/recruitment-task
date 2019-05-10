@@ -2,7 +2,7 @@ import React from 'react';
 
 const Product = () => {
     return (
-        <div className="product-item">
+        <div className="product-card">
             <a href="#">
                 <div>
                     <img src="" alt="product" />
