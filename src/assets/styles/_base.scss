@@ -1,4 +1,15 @@
 body {
     font-family: $main-font;
     font-weight: $main-weight;
+    max-width: 90%;
+    margin: 0 auto;    
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+}
+
+a:focus {
+    color: $light-blue;
 }

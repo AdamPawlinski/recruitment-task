@@ -1,0 +1,13 @@
+header {
+    border-bottom: 1px solid $dark-text;
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+}
