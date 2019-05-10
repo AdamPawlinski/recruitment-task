@@ -1,13 +1,37 @@
-header {
+.header-container {
     border-bottom: 1px solid $dark-text;
     display: flex;
     flex-direction: row;    
     justify-content: space-between;
     align-items: center;
+    max-height: 12vh;
 }
 
-ul {
+.navbar-list {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row; 
+    align-items: center;   
     justify-content: space-between;
+}
+
+.logo {
+    max-height: 10vh;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-link {
+    padding: 0 4rem;
+    color: $dark-text;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.nav-search {
+    padding: 1.8rem;
+    background-color: $search;
 }

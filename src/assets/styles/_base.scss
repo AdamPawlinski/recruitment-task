@@ -2,7 +2,8 @@ body {
     font-family: $main-font;
     font-weight: $main-weight;
     max-width: 90%;
-    margin: 0 auto;    
+    margin: 0 auto; 
+    background-color: $background;   
 }
 
 a {
@@ -12,4 +13,17 @@ a {
 
 a:focus {
     color: $light-blue;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 0.8rem;
+    line-height: 1rem;
 }

@@ -4,10 +4,10 @@ import ProductList from './ProductList.container';
 
 const Main = () => {
     return (
-        <div>
+        <section className="main-container">
             <Sidebar />
             <ProductList />
-        </div>
+        </section>
     )
 };
 

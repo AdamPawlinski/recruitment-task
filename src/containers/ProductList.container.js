@@ -3,9 +3,9 @@ import Product from '../components/Product.component';
 
 const ProductList = () => {
     return (
-        <section>
+        <article className="product-container">
             <Product />
-        </section>
+        </article>
     )
 };
 

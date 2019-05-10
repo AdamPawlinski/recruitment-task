@@ -14,8 +14,10 @@ const subpageText = {
 
 const Subpage = (subpageText) => {
     return (
-        <section>
-            <i className="far fa-address-book"></i>
+        <section className="subpage-container">
+            <div className="subpage-image-container">
+                <i className="far fa-address-book"></i>
+            </div>
             <h2>Subpage Title</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum. 

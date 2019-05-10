@@ -1,0 +1,20 @@
+.subpage-container {
+    margin: 25% auto;
+    max-height: 50%;
+    width: 50vw;
+    background-color: $white;
+    color: $dark-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subpage-image-container {
+    border-radius: 50%;
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
+}
+
+.subpage-container > p {
+    text-align: justify;
+}

@@ -1,0 +1,16 @@
+.sidebar-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.sidebar-header > h2 {
+    padding: .5rem;
+}
+
+.cart-container {
+    border: 1px dashed $white;
+    color: $white;
+    padding: .5rem;
+}

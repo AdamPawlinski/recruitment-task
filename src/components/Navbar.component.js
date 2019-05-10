@@ -3,16 +3,18 @@ import React from 'react';
 
 const Navbar = () => {
     return (        
-        <header>
-            <a><img src="" alt="logo" /></a>
-            <nav> 
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <img src="" alt="search" />
+        <header className="header-container">
+            <a href="#"><img className="logo" src="..\assets\images\logo.PNG" alt="logo" /></a>
+            <div className="nav-container">
+                <nav> 
+                    <ul className="navbar-list">
+                        <li className="navbar-link"><a href="#">Home</a></li>
+                        <li className="navbar-link"><a href="#">About</a></li>
+                        <li className="navbar-link"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <i className="fas fa-search nav-search"></i>
+            </div>
         </header>        
     )
 };
