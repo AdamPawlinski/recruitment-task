@@ -7,12 +7,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .subpage-image-container {
+    position: relative;
     border-radius: 50%;
     border: 1px solid $dark-blue;
     color: $dark-blue;
+    width: 6vw;
+    height: 7vh;
+}
+
+.subpage-image-container > i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
 }
 
 .subpage-container > p {

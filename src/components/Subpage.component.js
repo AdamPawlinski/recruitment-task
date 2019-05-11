@@ -1,29 +1,43 @@
 import React from 'react';
-import Product from '../components/Product.component';
 
-const subpageText = {
-    about: {
-        title: 'about',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum.'
+const subpageText = [
+    {
+        "path": "/about",
+        "title": "About",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum."
     },
-    contact: {
-        title: 'contact',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum.'
+    {
+        "path": "/contact",
+        "title": "Contact",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum."
     }
-}
+]
 
-const Subpage = (subpageText) => {
-    return (
-        <section className="subpage-container">
-            <div className="subpage-image-container">
-                <i className="far fa-address-book"></i>
-            </div>
-            <h2>Subpage Title</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum. 
-            </p>
-        </section>
-    )
+
+
+const Subpage = (props) => {
+    const { location } = props;  
+        const content = subpageText.find( 
+            (index) => { 
+                location.pathname === index.path                
+            }
+        )
+        console.log(content);
+        return (
+            <section className="subpage-container">
+            {console.log(subpageText, content, location.pathname)}
+                <div className="subpage-image-container">
+                    <i className="far fa-address-book"></i>
+                </div>  
+                <div>
+                    {/* <h2>{content.title}</h2>
+                    <p>
+                        {content.text} 
+                    </p> */}
+                </div> 
+            </section>
+        )            
+    // }       
 };
 
 export default Subpage;
