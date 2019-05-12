@@ -17,26 +17,25 @@ const subpageText = [
 
 const Subpage = (props) => {
     const { location } = props;  
-        const content = subpageText.find( 
-            (index) => { 
-                location.pathname === index.path                
-            }
-        )
-        console.log(content);
-        return (
-            <section className="subpage-container">
-            {console.log(subpageText, content, location.pathname)}
-                <div className="subpage-image-container">
-                    <i className="far fa-address-book"></i>
-                </div>  
-                <div>
-                    {/* <h2>{content.title}</h2>
-                    <p>
-                        {content.text} 
-                    </p> */}
-                </div> 
-            </section>
-        )            
+    const content = subpageText.find( 
+        index => { 
+            index.path === location.pathname            
+        }
+    )
+    return (
+        <section className="subpage-container">
+        {console.log(subpageText[0].path, content, location.pathname)}
+            <div className="subpage-image-container">
+                <i className="far fa-address-book"></i>
+            </div>  
+            <div>
+                {/* <h2>{content.title}</h2>
+                <p>
+                    {content.text} 
+                </p> */}
+            </div> 
+        </section>
+    )            
     // }       
 };
 
