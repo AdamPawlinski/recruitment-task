@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Cart from '../containers/Cart.container';
 
-const Sidebar = () => {
+const Sidebar = ({product}) => {
+    const [products, setProducts] = useState([]);
+
+    useEffect( () => {
+        // products.push(product);
+        setProducts(product);
+    }, [product]);
+
     return (
         <aside className="sidebar-container">
             <div>
@@ -19,7 +26,13 @@ const Sidebar = () => {
                     <h2>Cart</h2>
                     <span>(number)</span>
                 </div>
-                <Cart />
+                {
+                    !products ? (
+                        <span>Cart is empty</span>
+                    ) : (
+                        <Cart products={products}/>
+                    )
+                }                
             </div>            
         </aside>
     )

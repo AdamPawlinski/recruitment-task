@@ -1,10 +1,10 @@
 import React from 'react';
 
-const CartItem = () => {
+const CartItem = ({product, index}) => {
     return (
-        <div className="cart-item">        
-            <span>number</span>
-            <span>item</span>
+        <div className="cart-item" key={index}>        
+            <span>${product.numberFloat}</span>
+            <span>{product.productName}</span>
         </div>
     )
 };

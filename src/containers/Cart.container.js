@@ -1,10 +1,14 @@
 import React from 'react';
 import CartItem from '../components/CartItem.component';
 
-const Cart = () => {
+const Cart = ({products}) => {
     return (
         <div className="cart-container">
-            <CartItem />
+            {
+                products.map(
+                    (product, index) => <CartItem product={product} index={index}/>
+                )
+            }
         </div>
     )
 };

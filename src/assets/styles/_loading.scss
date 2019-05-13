@@ -1,5 +1,9 @@
+.subpage-container {
+    background-color: $background;    
+}
+
 .indicator {
-    width: 4em;
+    width: 4rem;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;

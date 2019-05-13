@@ -5,7 +5,7 @@ const path = require('path')
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
-  entry: './src/index.js',
+  entry: ['@babel/polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'src'),
     filename: 'bundle.js'

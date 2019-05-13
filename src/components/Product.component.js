@@ -1,15 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Product = () => {
+const Product = ({ index, product, handleClick }) => {
     return (
-        <div className="product-card">
-            <a href="#">
-                <div>
-                    <img src="" alt="product" />
-                    <h3>Title</h3>
-                    <p>description</p>
+        <div className="product-card" key={index}>
+            <Link to="/product">
+                <div onClick={() => handleClick(product)}>
+                    <img src={product.personAvatar} alt={`${product.productName} product image`} />
+                    <h3>{product.productName}</h3>                    
+                    <p>{product.stringShort}</p>
                 </div>
-            </a>
+            </Link>
         </div>
     )
 };

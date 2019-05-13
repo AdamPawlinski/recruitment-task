@@ -7,7 +7,7 @@
 
 .sidebar-container {
     display: grid;
-    grid-template-rows: repeat(4, 1fr,1fr);
+    grid-template-columns: repeat(4, 1fr,1fr);
     background-color: $light-blue;
     color: $white;
     grid-column: 1/2;
@@ -16,12 +16,12 @@
 
 .product-container {
     display: grid;
-    grid-auto-columns: minmax(10vw, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(10fr, 1fr));
     grid-gap: 5vw;
     grid-column: 2/3;    
 }
 
-.product-card{
+.product-card{    
     background-color: $white;
     color: $black;
 }

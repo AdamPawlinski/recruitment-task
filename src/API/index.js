@@ -15,17 +15,18 @@ let payload = {
     }
 }
 
-async API = () => await axios({
+const api = () => axios({
     method: "post",
     url: "https://app.fakejson.com/q",
     data: payload    
-  }).then(function(resp) {
-      if(resp.status === 200){
-        return resp.data;
-      }    
+  }).then(function(resp) { 
+    products = [];    
+    return resp.data.map(
+        ind => products.push(ind)
+    )      
   })
   .catch(
       error => console.log(error)
   );
 
-export default API;
+export default api;

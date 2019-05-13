@@ -8,7 +8,9 @@ const ProductList = (props) => {
         {
             !props.loading ? (
                 <article className="product-container">
-                    <Product />
+                    {props.products.map(
+                        (product, index) => <Product index={index} product={product} handleClick={props.handleClick}/>
+                    )}
                 </article>
                 ) :(
                 <Loading />
