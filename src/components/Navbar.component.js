@@ -9,8 +9,8 @@ const Navbar = () => {
                 <nav> 
                     <ul className="navbar-list">
                         <li className="navbar-link"><Link to="/">Home</Link></li>
-                        <li className="navbar-link"><Link to="/about">About</Link></li>
-                        <li className="navbar-link"><Link to="/contact">Contact</Link></li>
+                        <li className="navbar-link"><Link to="/subpage/about">About</Link></li>
+                        <li className="navbar-link"><Link to="/subpage/contact">Contact</Link></li>
                     </ul>
                 </nav>
                 <i className="fas fa-search nav-search"></i>

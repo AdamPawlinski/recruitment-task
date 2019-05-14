@@ -27,6 +27,7 @@
     font-size: 2rem;
 }
 
-.subpage-container > p {
-    text-align: justify;
+.subpage-container p,
+.subpage-container h2 {
+    text-align: center;
 }

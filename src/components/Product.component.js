@@ -1,17 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Product = ({ index, product, handleClick }) => {
+const Product = ({ products, match }) => {
     return (
-        <div className="product-card" key={index}>
-            <Link to="/product">
-                <div onClick={() => handleClick(product)}>
-                    <img src={product.personAvatar} alt={`${product.productName} product image`} />
-                    <h3>{product.productName}</h3>                    
-                    <p>{product.stringShort}</p>
+        products.map(
+            (product, index) => {
+                <div className="product-card" key={index}>
+                    <Link to={`${match.url}/${product.productName}`}>
+                        <div>
+                            <img src={product.personAvatar} alt={`${product.productName} product image`} />
+                            <h3>{product.productName}</h3>                    
+                            <p>{product.stringShort}</p>
+                        </div>
+                    </Link>
                 </div>
-            </Link>
-        </div>
+            }
+        )
     )
 };
 
