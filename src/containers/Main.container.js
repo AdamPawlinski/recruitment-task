@@ -1,7 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import axios from 'axios';
-import Sidebar from '../components/Sidebar.component';
+import { Route } from 'react-router';
 import ProductList from './ProductList.container';
+import ProductItem from '../components/ProductItem.component';
 // import api from '../API';
 
 let payload = {
@@ -23,7 +24,6 @@ const Main = (props) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState();
-    const [addedProduct, addingProduct] = useState();
 
     useEffect(() => {
         axios({
@@ -55,19 +55,11 @@ const Main = (props) => {
     }, [])
 
     return (
-        <section className="main-container">
-            <Sidebar product={addedProduct}/>
-            { 
-                error ? (
-                    <div className="subpage-container">Something went wrong. Error: {error.response.status} </div>
-                ) : (  
-                    <div>   
-                        {console.log(products, props.match)}          
-                        <ProductList id="product-list" products={products} loading={loading} match={props.match} addProduct={addProduct => addingProduct(addProduct)} />
-                    </div>  
-                ) 
-            }
-        </section>
+        error ? (
+            <div className="subpage-container">Something went wrong. Error: {error.response.status} </div>
+        ) : (  
+            <ProductList id="product-list" products={products} loading={loading} match={props.match} />  
+        )                    
     )
 };
 

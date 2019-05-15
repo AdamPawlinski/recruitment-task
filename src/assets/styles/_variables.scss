@@ -18,4 +18,30 @@ $main-font:    'Roboto';
 $second-font:  'Lato';
 $main-weight:   300;
 
+@mixin align-items($property) {
+    -webkit-box-align: $property;
+        -ms-flex-align: $property;
+            align-items: $property;
+}
 
+@mixin justify-content($property) {
+    -webkit-box-pack: $property;
+        -ms-flex-pack: $property;
+            justify-content: $property;
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+            -ms-transform: $property;
+                transform: $property;
+}
+
+@mixin transform-translateX($property) {
+    -webkit-transform: translateX($property);
+            transform: translateX($property);
+}
+
+@mixin grid($property)  {
+    display: -ms-$property;
+    display: $property;
+}

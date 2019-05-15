@@ -7,6 +7,8 @@ const Navbar = () => {
             <Link to="/"><img className="logo" src="..\assets\images\logo.PNG" alt="logo" /></Link>
             <div className="nav-container">
                 <nav> 
+                    <input className="nav-btn" type="checkbox" id="nav-btn" />
+                    <label className="nav-icon" htmlFor="nav-btn"><span className="navicon"></span></label>
                     <ul className="navbar-list">
                         <li className="navbar-link"><Link to="/">Home</Link></li>
                         <li className="navbar-link"><Link to="/subpage/about">About</Link></li>

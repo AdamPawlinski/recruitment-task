@@ -12,8 +12,7 @@ const ProductList = ({ products, loading, addProduct, match, ...props }) => {
                 !loading ? (
                         <div>
                             {console.log(products, match)}
-                            <Route path={match.url} children={(props) => <Product products={products} {...props}/>} />
-                            <Route path={`${match.url}/:name`} render={(props) => <ProductItem products={products} addProduct={addProduct} {...props} />} />
+                            <Route path={match.url} children={(props) => <Product products={products} {...props}/>} /> 
                         </div>
                     ) :(
                     <Loading />
