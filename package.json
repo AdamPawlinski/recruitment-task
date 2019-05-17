@@ -39,6 +39,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --hot --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
@@ -46,6 +48,7 @@
     "type": "git",
     "url": "https://github.com/AdamPawlinski/recruitment-task"
   },
+  "homepage": "https://github.com/AdamPawlinski/recruitment-task",
   "keywords": [],
   "author": "Adam Pawliński",
   "license": "ISC"
