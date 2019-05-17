@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (        
         <header className="header-container">
-            <Link to="/"><img className="logo" src="%PUBLIC_URL%\logo.PNG" alt="logo" /></Link>
+            <Link to="/"><img className="logo" src=".\logo.PNG" alt="logo" /></Link>
             <div className="nav-container">
                 <nav> 
                     <input className="nav-btn" type="checkbox" id="nav-btn" />
