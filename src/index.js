@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./assets/styles/main.scss";
+import { hot } from 'react-hot-loader';
 import App from './containers/App.container';
-require('./index.html');
+import './index.html';
 
+hot(module)(App);
 ReactDOM.render(<App />, document.getElementById('root'));

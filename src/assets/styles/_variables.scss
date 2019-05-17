@@ -41,7 +41,7 @@ $main-weight:   300;
             transform: translateX($property);
 }
 
-@mixin grid($property)  {
+@mixin display-grid($property)  {
     display: -ms-$property;
     display: $property;
 }

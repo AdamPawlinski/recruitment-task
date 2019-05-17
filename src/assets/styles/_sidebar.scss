@@ -19,6 +19,9 @@
 }
 
 .cart-container {
+    display: flex;
+    @include justify-content(center);
+    @include align-items(center);
     border: 1px dashed $white;
     color: $white;
     padding: .5rem;

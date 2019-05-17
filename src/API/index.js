@@ -1,9 +1,10 @@
-import axios from 'axios';
+// data configuration for fakejson.com - the tool for creating fake api; delaying parameter set to 2s
+// repeat property sets number of generated fake products
 
 let payload = {
     token: "rRBSvsILbnIJ8LJkuCyWAg",
     "parameters": {
-        delay: 1
+        delay: 2
     },
     data: {
         productName: "productName",
@@ -15,18 +16,4 @@ let payload = {
     }
 }
 
-const api = () => axios({
-    method: "post",
-    url: "https://app.fakejson.com/q",
-    data: payload    
-  }).then(function(resp) { 
-    products = [];    
-    return resp.data.map(
-        ind => products.push(ind)
-    )      
-  })
-  .catch(
-      error => console.log(error)
-  );
-
-export default api;
+export default payload;

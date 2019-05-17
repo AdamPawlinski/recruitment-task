@@ -1,13 +1,19 @@
 import React from 'react';
 import CartItem from '../components/CartItem.component';
 
-const Cart = ({products}) => {
+// maps product added to cart from addedProducts property
+
+const Cart = ({ addedProducts }) => {
     return (
         <div className="cart-container">
             {
-                products.map(
-                    (product, index) => <CartItem product={product} index={index}/>
-                )
+                !addedProducts ? (
+                    <span>Cart is empty</span>
+                ) : (
+                    addedProducts.map(
+                        product => <CartItem product={product} index={product.productName}/>
+                    )
+                )                    
             }
         </div>
     )

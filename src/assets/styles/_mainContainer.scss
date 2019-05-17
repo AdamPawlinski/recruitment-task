@@ -1,5 +1,5 @@
 .main-container {
-    @include grid(grid);
+    @include display-grid(grid);
     -ms-grid-columns: [sidebar] 5vw 1fr 5vw [main] 5vw 3fr;
     grid-template-columns: [sidebar] 1fr [main] 3fr;
     grid-gap: 5vw;
@@ -7,7 +7,7 @@
 }
 
 .sidebar-container {
-    @include grid(grid);  
+    @include display-grid(grid);  
     -ms-grid-column: 1;    
     -ms-grid-column-span: 1;    
     grid-column: 1/2; 
@@ -16,7 +16,7 @@
 }
 
 .sidebar {
-    @include grid(grid);
+    @include display-grid(grid);
     -ms-grid-columns: 1fr, 1fr;
     grid-template-columns: 1fr, 1fr;
     grid-auto-rows: auto;
@@ -27,9 +27,7 @@
 }
 
 .product-container {
-    @include grid(grid);
-    grid-auto-columns: -webkit-max-content;
-    grid-auto-columns: max-content;
+    @include display-grid(grid);
     -ms-grid-columns: repeat(auto-fit, minmax(15vw, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
     grid-gap: 5vw;
@@ -49,6 +47,7 @@
     @include justify-content(start);    
     background-color: $white;
     color: $black;
+    max-height: 30vh;
 }
 
 .product-card:hover {

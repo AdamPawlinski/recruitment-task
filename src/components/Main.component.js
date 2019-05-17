@@ -1,14 +1,15 @@
 import React  from 'react';
-import Sidebar from '../components/Sidebar.component';
+import ProductList from '../containers/ProductList.container';
 
-const MainLayout = (props) => {    
+// component renders error or generates component containing list of products
+
+const MainLayout = ({ error, products, loading }) => {    
     return (
-        <React.Fragment>
-            <Sidebar />
-            <section className="main-container">  
-                {props.children}
-            </section>
-        </React.Fragment>
+        error ? (
+            <div className="subpage-container">Something went wrong. Error: {error.response.status} </div>
+        ) : (  
+            <ProductList id="product-list" products={products} loading={loading} />  
+        ) 
     )
 };
 

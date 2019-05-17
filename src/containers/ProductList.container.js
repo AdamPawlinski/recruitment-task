@@ -1,24 +1,26 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
 import Product from '../components/Product.component';
-import ProductItem from '../components/ProductItem.component';
 import Loading from '../components/Loading.component';
 
-const ProductList = ({ products, loading, addProduct, match, ...props }) => {
+
+// component maps products from fake api or shows loading indicator
+
+const ProductList = ({ products, loading }) => {
 
     return (
-        <React.Fragment>      
+        <div className="product-container">      
             {
                 !loading ? (
-                        <div>
-                            {console.log(products, match)}
-                            <Route path={match.url} children={(props) => <Product products={products} {...props}/>} /> 
-                        </div>
-                    ) :(
+                    products.map(             
+                        product => (  
+                            <Product key={product.productName} product={product} />
+                        )
+                    ) 
+                ) : (
                     <Loading />
                 )
             }
-        </React.Fragment>
+        </div>
     )    
 };
 

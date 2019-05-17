@@ -1,5 +1,7 @@
 import React from 'react';
 
+// content to render in contact and about pages also to render further components based on this layout
+
 const subpageText = [
     {
         "path": "about",

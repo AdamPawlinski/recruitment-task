@@ -3,19 +3,30 @@
     color: $white;
 }
 
+.product-item > img {
+    object-fit: cover;
+    object-position: center;    
+}
+
 .product-details {
-    display: -ms-grid;
-    display: grid;
+    @include display-grid(grid);
     grid-auto-rows: repeat(2, 2fr,1fr);
     padding: .5rem;     
 }
 
 .product-details > h3 {
-    display: -ms-grid;
-    display: grid;
+    @include display-grid(grid);
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
+    padding: .5rem;
+} 
+
+.product-details > h4 {
+    @include display-grid(grid);
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
     padding: .5rem;
 } 
 
@@ -41,6 +52,6 @@
     grid-column: 2/3;
     padding: .5rem;
     background-color: $accent;
-    margin: .5rem;
+    margin: 1rem;
     border: none;
 }

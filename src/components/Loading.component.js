@@ -10,8 +10,7 @@ const Loading = () => {
                 <div></div>
             </div> 
         </section>
-    )            
-    // }       
+    )       
 };
 
 export default Loading;

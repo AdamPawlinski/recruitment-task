@@ -93,7 +93,8 @@
     .product-container {
         display: -ms-grid;
         display: grid;
-        grid-auto-columns: 1fr;   
+        -ms-grid-columns: repeat(auto-fit, minmax(30vw, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
     }
 
     // hamburger menu created thanks to https://codepen.io/mutedblues/pen/MmPNPG 

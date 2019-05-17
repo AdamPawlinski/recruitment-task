@@ -1,15 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const ProductItem = ({ products, match, ...props }) => {
-    const [addedProduct, addingProduct] = useState();
+const ProductItem = ({ products, addProduct, ...props }) => {   
 
     const productToRender = products.find(
-            item => item.productName === match.params.name
+            item => item.productName === props.match.params.name
         ) 
 
     return ( 
         <React.Fragment>
-            <Sidebar product={addedProduct}/>
             {
                 productToRender ? (
                     <div className="product-item">
@@ -19,7 +18,7 @@ const ProductItem = ({ products, match, ...props }) => {
                             <h3>{product}</h3>
                             <h4>${productToRender.numberFloat}</h4>
                             <p>{productToRender.stringLong}</p>
-                            <button type="button" name="add product" value={productToRender} onClick={(productToRender)=> addingProduct(productToRender)}>Add to Cart</button>         
+                            <button type="button" name="add product" value={productToRender} onClick={(productToRender)=> addProduct(productToRender)}>Add to Cart</button>         
                         </div>   
                     </div> 
                 ) : (
@@ -31,5 +30,14 @@ const ProductItem = ({ products, match, ...props }) => {
         </React.Fragment>        
     )
 };
+
+ProductItem.propTypes = {
+    products: PropTypes.shape({
+        productName: PropTypes.string.isRequired,
+        stringLong: PropTypes.string.isRequired,
+        personAvatar: PropTypes.string.isRequired,
+        numberFloat: PropTypes.number.isRequired
+    })    
+}
 
 export default ProductItem;
