@@ -1,7 +1,10 @@
 import React, { useState, useEffect }  from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import Main from '../containers/Main.container';
+import '../assets/styles/main.scss';
+// import Main from '../containers/Main.container';
 import Navbar from '../components/Navbar.component';
+import MainLayout from '../components/Main.component';
+import ProductItem from '../components/ProductItem.component';
 import Subpage from "../components/Subpage.component";
 import NotFound from "../components/NotFound.component";
 import payload from '../API';
@@ -11,7 +14,9 @@ const App = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState();
+    const [addedProducts, addingProduct] = useState([]);
 
+    
   // data fetching utilizing fakejson.com api
 
     useEffect(() => {        
@@ -48,13 +53,20 @@ const App = () => {
       return () => setProducts([]);
     }, [])
 
+    const addProduct = (product) => {
+      let add = addedProducts.concat(product);          
+      addingProduct(add);
+    }
+
     // adding routing to app
 
     return (
       <HashRouter>    
         <Navbar /> 
         <Switch> 
-            <Route path="/" exact render={(props) => <Main {...props} products={products} loading={loading} error={error} />}/>   
+          {console.log(addProduct, addedProducts)}
+            <Route path="/" exact render={(props) => <MainLayout {...props} loading={loading} error={error} products={products} addedProducts={addedProducts} /> }/>   
+            <Route path="/product/:name" render={(props) =><ProductItem {...props} products={products} addProduct={addProduct}  addedProducts={addedProducts} />} />
             <Route path="/subpage/:name" component={Subpage} /> 
             <Route path="*" component={NotFound} />             
         </Switch>       

@@ -1,4 +1,7 @@
 @media screen and (max-width: 992px) { 
+    body {
+        height: auto;
+    }
     h2 {
         font-size: 1.5rem;
     }
@@ -71,6 +74,7 @@
     .main-container {
         max-width: 70vw;
         margin: 0 auto;
+        height: auto;
     }
 
     .sidebar-container > div > p {
@@ -185,4 +189,30 @@
     .nav-btn:checked ~ .nav-icon:not(.steps) .navicon:after {
         top: 0;
     }
+
+    //product details
+
+    .product-item {
+        height: auto; 
+        margin: 5vh 0;           
+    }
+
+    .product-details {
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        @include justify-content(center);
+        @include align-items(center);
+        height: auto;  
+        text-align: justify;
+    }
+    
+    .product-details > button {          
+        max-height: 15vh;
+        max-width: 25vw;
+        font-size: 2rem;
+    }
+
 }

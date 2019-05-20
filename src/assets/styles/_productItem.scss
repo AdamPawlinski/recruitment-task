@@ -1,17 +1,22 @@
 .product-item {
     background-color: $light-blue;
     color: $white;
+    height: auto;
+    padding: .5rem;
 }
 
 .product-item > img {
     object-fit: cover;
-    object-position: center;    
+    object-position: center; 
+    height: 15rem;    
 }
 
 .product-details {
     @include display-grid(grid);
     grid-auto-rows: repeat(2, 2fr,1fr);
-    padding: .5rem;     
+    padding: .5rem; 
+    height: auto;  
+    text-align: justify;    
 }
 
 .product-details > h3 {
@@ -39,6 +44,7 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
+    margin-bottom: 1rem;
 }
 
 .product-details > button {
@@ -52,6 +58,9 @@
     grid-column: 2/3;
     padding: .5rem;
     background-color: $accent;
+    align-self: center;
     margin: 1rem;
     border: none;
+    max-height: 5vh;
+    width: 10vw;
 }

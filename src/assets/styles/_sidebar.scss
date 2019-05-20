@@ -20,6 +20,7 @@
 
 .cart-container {
     display: flex;
+    flex-direction: column;
     @include justify-content(center);
     @include align-items(center);
     border: 1px dashed $white;
@@ -31,4 +32,10 @@
 .cart-item {
     background-color: $dark-blue;
     padding: .5rem;
+}
+
+.cart-item span {
+    font-weight: 200;
+    font-size: .8rem;
+    margin: .3rem;
 }

@@ -11,7 +11,7 @@ const Cart = ({ addedProducts }) => {
                     <span>Cart is empty</span>
                 ) : (
                     addedProducts.map(
-                        product => <CartItem product={product} index={product.productName}/>
+                        product => <CartItem product={product} key={product.productName}/>
                     )
                 )                    
             }

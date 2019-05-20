@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Cart from '../containers/Cart.container';
 
 // main component for sidebar renders main layout and cart component or empty cart message
 
 const Sidebar = ({ addedProducts }) => {
+    const [cartItemsCounter, cartItemsHandler] = useState(0);
+
+    useEffect(() => {
+        cartItemsHandler(addedProducts.length)
+    }, [addedProducts])
 
     return (
         <aside className="sidebar-container">
@@ -21,9 +26,9 @@ const Sidebar = ({ addedProducts }) => {
                     <div className="sidebar-header">
                         <i className="fas fa-shopping-cart"></i>
                         <h2>Cart</h2>
-                        <span>(number)</span>
+                        <span>({ cartItemsCounter })</span>
                     </div>
-                    <Cart addedProducts={addedProducts}/>                                        
+                    <Cart addedProducts={addedProducts} />                                        
                 </div> 
             </div>           
         </aside>
