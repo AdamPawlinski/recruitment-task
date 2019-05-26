@@ -35,7 +35,7 @@ const ProductItem = ({ products, addProduct, addedProducts, match }) => {
                         <img src={productToRender.personAvatar} alt="product" /> 
                         <div className="product-details">                 
                             <h3>{productToRender.productName}</h3>
-                            <h4>${productToRender.numberFloat}</h4>
+                            <h4>$ {productToRender.numberFloat}</h4>
                             <p>{productToRender.stringLong}</p>
                             <button type="button" id="buttonState" name="add product" value={productToRender} 
                                 onClick={() => buttonHandler()}>Add to Cart</button>         

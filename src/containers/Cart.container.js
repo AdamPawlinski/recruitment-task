@@ -7,8 +7,8 @@ const Cart = ({ addedProducts }) => {
     return (
         <div className="cart-container">
             {
-                !addedProducts ? (
-                    <span>Cart is empty</span>
+                addedProducts.length === 0 ? (
+                    <span>Cart is empty</span>                                                            
                 ) : (
                     addedProducts.map(
                         product => <CartItem product={product} key={product.productName}/>

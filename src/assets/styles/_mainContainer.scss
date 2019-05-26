@@ -12,7 +12,8 @@
     -ms-grid-column-span: 1;    
     grid-column: 1/2; 
     grid-auto-rows: auto;
-    @include align-items(start);    
+    @include align-items(start);  
+    margin-bottom: 1rem;  
 }
 
 .sidebar {
@@ -61,6 +62,33 @@
 .product-card h3, 
 .product-card p {
     padding: 0 .5rem;
+}
+
+.product-card p {
+    overflow: hidden;
+    position: relative; 
+    line-height: 1rem;
+    max-height: 3rem; 
+    text-align: justify;  
+    margin-right: .5rem;
+    padding-right: 1rem;
+}
+
+.product-card p:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.product-card p:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2rem;
+  background: $white;
 }
 
 .product-card img {

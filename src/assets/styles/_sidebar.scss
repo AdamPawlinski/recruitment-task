@@ -8,6 +8,7 @@
             flex-direction: row;
     @include justify-content(start);
     @include align-items(center);
+    margin: .5rem;
 }
 
 .sidebar-header > h2 {
@@ -32,10 +33,18 @@
 .cart-item {
     background-color: $dark-blue;
     padding: .5rem;
+    margin: .2rem;
+    width: 80%;
+    text-align: center;
 }
 
 .cart-item span {
     font-weight: 200;
     font-size: .8rem;
-    margin: .3rem;
+    margin: .3rem;   
+    text-overflow: ellipsis;
+}
+
+.cart-item span:nth-child(1) {
+    color: $accent;
 }

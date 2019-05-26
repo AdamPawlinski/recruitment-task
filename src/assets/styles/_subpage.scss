@@ -32,7 +32,16 @@
     font-size: 2rem;
 }
 
-.subpage-container p,
 .subpage-container h2 {
     text-align: center;
+}
+
+.contact-text {
+    max-width: 15vw;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 20vw;
+    text-align: justify;
 }

@@ -16,7 +16,7 @@
     grid-auto-rows: repeat(2, 2fr,1fr);
     padding: .5rem; 
     height: auto;  
-    text-align: justify;    
+    text-align: justify; 
 }
 
 .product-details > h3 {
@@ -44,7 +44,7 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;  
 }
 
 .product-details > button {
@@ -63,4 +63,5 @@
     border: none;
     max-height: 5vh;
     width: 10vw;
+    color: $white;
 }

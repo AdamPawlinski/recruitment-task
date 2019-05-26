@@ -64,7 +64,6 @@ const App = () => {
       <HashRouter>    
         <Navbar /> 
         <Switch> 
-          {console.log(addProduct, addedProducts)}
             <Route path="/" exact render={(props) => <MainLayout {...props} loading={loading} error={error} products={products} addedProducts={addedProducts} /> }/>   
             <Route path="/product/:name" render={(props) =><ProductItem {...props} products={products} addProduct={addProduct}  addedProducts={addedProducts} />} />
             <Route path="/subpage/:name" component={Subpage} /> 

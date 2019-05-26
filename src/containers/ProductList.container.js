@@ -12,8 +12,8 @@ const ProductList = ({ products, loading }) => {
             {
                 !loading ? (
                     products.map(             
-                        product => (  
-                            <Product key={product.productName} product={product} />
+                        (product, index) => (  
+                            <Product key={index} product={product} />
                         )
                     ) 
                 ) : (

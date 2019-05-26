@@ -6,12 +6,14 @@ const subpageText = [
     {
         "path": "about",
         "title": "About",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum.",
+        "class": "about-text"
     },
     {
         "path": "contact",
         "title": "Contact",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut vestibulum dolor. In blandit elit eget magna tempor, a varius est bibendum.",
+        "class": "contact-text"
     }
 ]
 
@@ -26,7 +28,7 @@ const Subpage = (props) => {
             </div>  
             <div>
                 <h2>{content.title}</h2>
-                <p>
+                <p className={content.class}>
                     {content.text} 
                 </p>
             </div> 

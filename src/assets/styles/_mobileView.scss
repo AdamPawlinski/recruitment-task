@@ -43,7 +43,7 @@
             -ms-flex-direction: column;
                 flex-direction: column;    
         @include justify-content(center);
-        padding-left: 0;
+        padding-left: 0;        
         overflow: hidden;
     }
 
@@ -66,7 +66,7 @@
     }
     
     .navbar-link {
-        padding: 1.5rem 0;
+        padding: 1rem 0;
         font-size: 1rem;
         font-weight: 600;
     }
@@ -113,7 +113,7 @@
 
     .navbar-list a {
         display: block;
-        padding: 20px 20px;
+        padding: 1.25rem 1.25rem;
         border-right: 1px solid $gray;
         border-bottom: 1px solid $gray;
         text-decoration: none;
@@ -127,7 +127,7 @@
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        padding: 28px 20px;
+        padding: 1.75rem 1.25rem;
         position: relative;
         -webkit-user-select: none;
            -moz-user-select: none;
@@ -143,7 +143,7 @@
         -webkit-transition: background .2s ease-out;
         -o-transition: background .2s ease-out;
         transition: background .2s ease-out;
-        width: 18px;
+        width: 1.125rem;
     }
     
     .nav-icon .navicon:before,
@@ -152,11 +152,11 @@
         content: '';
         display: block;
         height: 100%;
+        width: 100%;
         position: absolute;
         -webkit-transition: all .2s ease-out;
         -o-transition: all .2s ease-out;
-        transition: all .2s ease-out;
-        width: 100%;
+        transition: all .2s ease-out;       
     }
     
     .nav-icon .navicon:before {
@@ -170,7 +170,7 @@
     /* menu btn */  
     
     .nav-btn:checked ~ .navbar-list {
-        max-height: 240px;
+        max-height: 15rem;
     }
     
     .nav-btn:checked ~ .nav-icon .navicon {
@@ -210,9 +210,9 @@
     }
     
     .product-details > button {          
-        max-height: 15vh;
-        max-width: 25vw;
-        font-size: 2rem;
+        min-height: 6vh;
+        min-width: 25vw;
+        font-size: 1.2rem;
     }
 
 }
